@@ -80,11 +80,14 @@
             "importmap:install": "symfony-cmd"
         },
         "post-install-cmd": [
+            "@link",
             "@auto-scripts"
         ],
         "post-update-cmd": [
+            "@link",
             "@auto-scripts"
-        ]
+        ],
+        "link": "vendor/bin/dev-apps linker ~/develop/php/forked-maker-bundle ./vendor/symfony/maker-bundle"
     },
     "conflict": {
         "symfony/symfony": "*"
@@ -103,6 +106,13 @@
         "symfony/maker-bundle": "^1.0",
         "symfony/phpunit-bridge": "^7.0",
         "symfony/stopwatch": "7.0.*",
-        "symfony/web-profiler-bundle": "7.0.*"
-    }
+        "symfony/web-profiler-bundle": "7.0.*",
+        "rushlow-development/dev-apps": "dev-main"
+    },
+    "repositories": [
+        {
+            "type": "github",
+            "url": "https://github.com/rushlow-development/dev-apps"
+        }
+    ]
 }
