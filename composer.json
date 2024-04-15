@@ -87,7 +87,7 @@
             "@link",
             "@auto-scripts"
         ],
-        "link": "vendor/bin/dev-apps linker ~/develop/php/forked-maker-bundle ./vendor/symfony/maker-bundle"
+        "link": "./link-apps.sh"
     },
     "conflict": {
         "symfony/symfony": "*"
