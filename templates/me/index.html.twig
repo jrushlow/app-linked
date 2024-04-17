@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Me index{% endblock %}
+
+{% block body %}
+    <h1>Me index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Occupation</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for me in mes %}
+            <tr>
+                <td>{{ me.id }}</td>
+                <td>{{ me.name }}</td>
+                <td>{{ me.occupation }}</td>
+                <td>
+                    <a href="{{ path('app_me_show', {'id': me.id}) }}">show</a>
+                    <a href="{{ path('app_me_edit', {'id': me.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_me_new') }}">Create new</a>
+{% endblock %}
