@@ -1,0 +1,16 @@
+parameters:
+    level: 6
+    bootstrapFiles:
+        - vendor/autoload.php
+#        - tools/phpstan/includes/vendor/autoload.php
+    symfony:
+        containerXmlPath: var/cache/dev/App_KernelDevDebugContainer.xml
+    paths:
+        - src
+        - tests
+    excludePaths:
+#        - tests/fixtures
+    ignoreErrors:
+#        -
+#            message: '#Property .+phpCompatUtil is never read, only written\.#'
+#            path: src/Maker/*
